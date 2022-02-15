@@ -1,16 +1,15 @@
 <?php
 // Ruta de la app
 define('RUTA_APP', dirname(dirname(__FILE__)));
-//C:\xampp\htdocs\courses\render2web_mvc\app
 
 // Ruta url
-define('RUTA_URL', 'http://localhost/courses/render2web_mvc');
+define('RUTA_URL', 'http://localhost/courses/mvc_plantilla');
 
 // Ruta url
-define('NOMBRE_SITIO', 'Prueba');
+define('NOMBRE_SITIO', 'Sitio web');
 
 // Configuracion de acceso Base de Datos
-define ('DB_HOST', 'localhost:3307');
-define ('DB_USER', 'root');
-define ('DB_PASS', '');
-define ('DB_DATABASE', 'mvc');
+define ('DB_HOST', '<HOST>');
+define ('DB_USER', '<USER>');
+define ('DB_PASS', '<PASS>');
+define ('DB_DATABASE', '<DATABASE>');
