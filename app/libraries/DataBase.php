@@ -28,7 +28,7 @@ class DataBase
     }
   }
 
-  // Prepara la consulta
+  // Prepara para la consulta
   public function query($query)
   {
     $this->stmt = $this->dbh->prepare($query);
@@ -56,7 +56,7 @@ class DataBase
     $this->stmt->bindValue($param, $value, $type);
   }
 
-  // Ejecuta la consutla
+  // Ejecuta la consulta
   public function execute()
   {
     return $this->stmt->execute();

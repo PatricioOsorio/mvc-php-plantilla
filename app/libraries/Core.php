@@ -5,7 +5,7 @@
   2 - Metodos
   3 - Parametro
 
-  Ej. articulos/actiañozar/4
+  Ej. articulos/actualizar/4
 */
 
 class Core
@@ -17,8 +17,6 @@ class Core
   public function __construct()
   {
     $url = $this->getUrl();
-
-    // print_r($this->getUrl());
 
     // 1 - Busca si existe controlador
     if (isset($url[0])) {
@@ -32,7 +30,7 @@ class Core
       }
     }
 
-    // Requerir el controlador
+    // Importa el controlador
     require_once "../app/controllers/" . $this->currentController . ".php";
     $this->currentController = new $this->currentController;
 
@@ -58,8 +56,6 @@ class Core
 
   public function getUrl()
   {
-    // echo $_GET['url'];
-
     // Extraccion de la url
     // Ej: controller/method/parameter
     if (isset($_GET['url'])) {

@@ -1,5 +1,5 @@
 <?php
-// Controlador principal: encargado de cargar mdoelos y visas
+// Controlador principal: encargado de cargar modelos y vistas
 class Controller
 {
   // Carga modelo
@@ -12,8 +12,9 @@ class Controller
   // Carga vista
   public function view($view, $data = [])
   {
-    // Checa si la vista existe
     $path = "../app/views/" . $view . ".php";
+    
+    // Checa si la vista existe
     file_exists($path) ? require_once $path : die("La vista no existe");
   }
 }
