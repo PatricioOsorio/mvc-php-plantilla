@@ -10,7 +10,7 @@
 
 class Core
 {
-  protected $currentController = "pages";
+  protected $currentController = "paginas";
   protected $currentMethod = "index";
   protected $paramethers = [];
 
@@ -20,7 +20,7 @@ class Core
 
     // 1 - Busca si existe controlador
     if (isset($url[0])) {
-      if (file_exists("../app/controllers/" . strtolower($url[0]) . ".php")) {
+      if (file_exists("../app/controllers/" . ucwords($url[0]) . ".php")) {
 
         // Si existe se setea como controlador por defecto
         $this->currentController = ucwords($url[0]);
